@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.shadow {
+    filter:  drop-shadow(-2px 0px 20px #ffffff);
+}
+
+body{
+    background-color: black;
+}
+
+ 
