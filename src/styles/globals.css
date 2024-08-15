@@ -1,13 +1,100 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-.shadow {
-    filter:  drop-shadow(-2px 0px 20px #ffffff);
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@1&family=Playwrite+IT+Moderna:wght@100..400&display=swap');
+*{
+    font-family: "Playwrite IT Moderna", cursive;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+.shadow{
+    mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 12.5%, rgb(0, 0, 0) 87.5%, rgba(0, 0, 0, 0) 100%);
+}
+.white-ball{
+    background: linear-gradient(180deg, #ffffff 0%, rgba(10, 10, 10, 0) 100%);
+    border-radius: 100%;
+    bottom: -791px;
+    flex: none; 
+    height: 955px;
+    left: -443px;
+    position: absolute;
+    right: -443px;
+}
+.black-ball{
+    z-index: 1;
+    background-color: rgb(10, 10, 10);
+    border-radius: 100%;
+    bottom: -799px;
+    box-shadow: inset 0 2px 20px #fff, 0 -10px 50px 1px #ffffff7d;
+    flex: none;
+    height: 956px;
+    left: -443px;
+    position: absolute;
+    right: -443px;
 }
 
-body{
-    background-color: black;
+.container {
+    align-content: center;
+    align-items: center;
+    display: flex;
+    flex: none;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 0px;
+    justify-content: center;
+    inset: 0;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
 }
-
- 
+.left-side{
+    background: linear-gradient(90deg, #000000 0%, rgba(10, 10, 10, 0) 100%);
+    flex: none;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    width: 600px;
+}
+.right-side{
+    background: linear-gradient(270deg, #000000 0%, rgba(10, 10, 10, 0) 100%);
+    flex: none;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    width: 600px;
+}
+.bubblePopper {
+    filter: blur(90px);
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100%;
+    width: 100%;
+    bottom: -705px;
+}
+.mouth, .eyeL, .eyeR {
+    transition: 200ms;
+}
+#reset {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    box-shadow: 0px 4px 6px rgba(0,0,0,0.8);
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    background: #d1cfe2;
+}
+#reset > span {
+    user-select: none;
+    pointer-events: none;
+}
+#reset:hover {
+    transform:translateY(-2px);
+    box-shadow: 0px 6px 8px rgba(0,0,0,0.6);
+    border: 2px solid #52b2cf;
+}
